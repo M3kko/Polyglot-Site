@@ -312,23 +312,25 @@
     text-align: center;
   }
 
-  /* =========== FOOTER =========== */
+ /* FOOTER STYLES */
 .site-footer {
-  background-color: #3E2C1C; /* specified color */
+  width: 100%;                /* full width */
+  background-color: #3E2C1C;  /* dark brown */
   color: #fff;
+  padding: 20px;
   text-align: center;
-  padding: 20px 0;
-  margin-top: 40px; /* space above the footer if needed */
+  margin-top: 40px;           /* spacing above footer */
 }
 
 .footer-text {
   margin: 0;
-  font-family: 'Comfortaa', sans-serif; /* or any desired font */
+  font-family: 'Comfortaa', sans-serif;
   font-size: 16px;
+  margin-bottom: 8px;         /* space between text & links */
 }
 
 .footer-links {
-  margin-top: 8px;
+  display: inline-block;      /* so we can center them easily */
 }
 
 .footer-links a {
@@ -342,39 +344,36 @@
   text-decoration: underline;
 }
 
-/* =========== FLASHCARD WRAPPER =========== */
-.flashcard-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* Keep your existing .flashcard-wrapper, .flip-container, .flashcard, .flashcard-button, etc. */
 
-/* =========== MOBILE RESPONSIVENESS =========== */
-/* 
-   Example breakpoint at max-width: 768px
-   Adjust as desired (e.g., 600px for smaller screens or 992px for bigger).
-*/
+/* MEDIA QUERIES FOR MOBILE */
 @media (max-width: 768px) {
-  
-  /* 1) Hide "Join The Discord!" entirely on mobile */
+
+  /* 1) Hide "Join the Discord!" */
   .left-column {
     display: none;
   }
 
-  /* 2) Make the grid 1 column so center + right stack vertically */
+  /* 2) Switch to single-column layout */
   .page-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* only one column now */
     grid-row-gap: 30px;
   }
 
-  /* 3) Scale down the flashcard for smaller screens */
-  .flashcard {
-    transform: scale(0.9); /* or 0.8, tweak as needed */
-    transform-origin: top center;
+  /* 3) Scale down the card container 
+     We'll scale the entire flip-container so icons + text shrink together
+  */
+  .flip-container {
+    transform: scale(0.85); 
+    transform-origin: top center; /* anchor scaling from top center */
+    margin: 0 auto; /* keep it centered horizontally */
   }
 
-  /* 4) Place "More Cards" below the flashcard (since we only have one column now) */
-  .right-column {
-    margin: 0 auto; /* center it if you wish */
+  /* If you want more or less scaling, adjust to 0.8, 0.9, etc. */
+
+  /* 4) Ensure the card doesn't overflow horizontally */
+  .center-column {
+    overflow: hidden; 
   }
 }
+

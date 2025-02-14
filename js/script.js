@@ -3,17 +3,51 @@
  ******************************************************/
 const flashcards = [
   {
-    frontText: 'Hello',
-    backText: 'This is the Answer!',
-    audioPath: 'assets/audio/hello.mp3',
+    frontText: 'Kudasai',
+    backText: 'Please'
   },
   {
-    frontText: 'Bonjour',
-    backText: 'C’est la réponse!',
-    audioPath: 'assets/audio/bonjour.mp3'
+    frontText: 'Hai',
+    backText: 'Yes'
   },
-  // Add more flashcards here...
+  {
+    frontText: 'Iie',
+    backText: 'No'
+  },
+  {
+    frontText: 'Namae wa nan desu ka?',
+    backText: 'What is your name?'
+  },
+  {
+    frontText: 'Tanoshimi',
+    backText: 'I’m excited'
+  },
+  {
+    frontText: 'Konnichiwa',
+    backText: 'Hello'
+  },
+  {
+    frontText: 'Watashi wa [your name] desu',
+    backText: 'I am [your name]'
+  },
+  {
+    frontText: 'Ogenki desu ka?',
+    backText: 'How are you?'
+  },
+  {
+    frontText: 'Genki desu',
+    backText: 'I’m good'
+  },
+  {
+    frontText: 'Konbanwa',
+    backText: 'Good evening'
+  },
+  {
+    frontText: 'Sayounara',
+    backText: 'Goodbye'
+  }
 ];
+
 
 let currentIndex = 0;
 
