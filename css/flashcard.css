@@ -56,7 +56,7 @@
     font-size: 64px;
     color: #2B1E13;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 100px;
     margin-bottom: 40px; /* spacing before the 3-column layout */
   }
   
@@ -115,8 +115,8 @@
   
   .flashcard-text {
     /* “Hello” or other flashcard content */
-    font-family: 'Comfortaa', sans-serif;
-    font-size: 24px;
+    font-family: 'Comfortaa';
+    font-size: 32px;
     color: #C49C6E;
     text-align: center;
   }
@@ -159,7 +159,7 @@
   }
   
   .coming-soon {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Comfortaa';
     font-size: 16px;
     font-weight: 400;
     color: #C49C6E;
