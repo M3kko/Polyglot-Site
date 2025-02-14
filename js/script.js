@@ -47,9 +47,9 @@ const flashcards = [
     audioPath: 'assets/audio/genki-desu.mp3',
   },
   {
-    frontText: 'Sayounara',
+    frontText: 'Jaa, mata',
     backText: 'Goodbye',
-    audioPath: '/assets/audio/sayounara.mp3',
+    audioPath: '/assets/audio/jaa.mp3',
   }
 ];
 
