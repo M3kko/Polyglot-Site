@@ -1,0 +1,169 @@
+/* flashcard.css */
+
+/* ============================
+   1. @font-face (optional)
+   ============================ */
+/* 
+  If you load from local files, update the paths.
+  If using a CDN, remove these blocks and add <link> in your HTML head instead.
+*/
+
+@font-face {
+    font-family: 'GochiHand';
+    src: url('fonts/GochiHand-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'FredokaOne';
+    src: url('fonts/FredokaOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Comfortaa';
+    src: url('fonts/Comfortaa-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* ============================
+     2. Global Reset & Body
+     ============================ */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #F7E7CE; /* Overall page background */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    /* We’ll align the main heading + page-layout in the center horizontally */
+  }
+  
+  /* ============================
+     3. Main Heading
+     ============================ */
+  .main-heading {
+    /* Gochi Hand, large, center-aligned */
+    font-family: 'GochiHand', cursive;
+    font-size: 64px;
+    color: #2B1E13;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px; /* spacing before the 3-column layout */
+  }
+  
+  /* ============================
+     4. Page Layout
+     ============================ */
+  /* A container with 3 columns: left, center, right */
+  .page-layout {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 40px;
+    align-items: center;
+    /* margin-bottom: 50px; 
+       you can add a bottom margin if you want extra space below 
+    */
+  }
+  
+  /* ============================
+     5. Left Column (Discord)
+     ============================ */
+  .left-column {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .join-discord {
+    /* 48px, Fredoka One, #2A1D12 */
+    font-family: 'FredokaOne', sans-serif;
+    font-size: 48px;
+    color: #2A1D12;
+    text-align: center;
+    line-height: 1.2;
+  }
+  
+  /* ============================
+     6. Center Column (Flashcard)
+     ============================ */
+  .center-column {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .flashcard {
+    width: 500px;
+    height: 300px;
+    background-color: #FFFDF9;
+    border-radius: 20px;
+  
+    /* Center content inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .flashcard-text {
+    /* “Hello” or other flashcard content */
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 24px;
+    color: #C49C6E;
+    text-align: center;
+  }
+  
+  /* ============================
+     7. Right Column (More Cards)
+     ============================ */
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .more-cards {
+    /* 32px, FredokaOne, #2A1D12 */
+    font-family: 'FredokaOne', sans-serif;
+    font-size: 32px;
+    color: #2A1D12;
+    margin-bottom: 24px;
+  }
+  
+  .mini-cards-grid {
+    /* 2 columns x 3 rows for 6 mini-cards */
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    grid-auto-rows: 120px;
+    gap: 20px; 
+  }
+  
+  /* Each mini-card: 120×120, #FFFDF9, rounded corners */
+  .mini-card {
+    width: 120px;
+    height: 120px;
+    background-color: #FFFDF9;
+    border-radius: 20px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .coming-soon {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #C49C6E;
+    text-align: center;
+    line-height: 1.3;
+  }
+  
