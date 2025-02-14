@@ -58,7 +58,7 @@ const flashcards = [
    * 5) BUTTONS: LIGHTBULB, BOOK, SPEAKER, ETC.
    ******************************************************/
   function showFirstLetter() {
-    const flashcardText = document.querySelector('.flashcard-front .flashcard-text');
+    const flashcardText = document.querySelector('.flashcard-back .back-text');
     if (!flashcardText) {
       alert('No text found!');
       return;
