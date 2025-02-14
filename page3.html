@@ -16,68 +16,77 @@
       <h2 class="join-discord">Join The<br>Discord!</h2>
     </div>
 
-    <!-- Center Column: Flip Container -->
-    <div class="center-column">
-      <div class="flip-container" onclick="flipCard(event)">
-        <div class="flashcard-inner">
-          
-          <!-- FRONT FACE -->
-          <div class="flashcard-face flashcard-front">
-            <div class="flashcard">
-              <!-- Lightbulb (top-left) -->
-              <div class="flashcard-button button-lightbulb top-left">
-                <img src="assets/images/light.svg" alt="Lightbulb Icon">
-              </div>
-              <!-- Book (top-center) -->
-              <div class="flashcard-button button-book top-center">
-                <img src="assets/images/book.svg" alt="Book Icon">
-              </div>
-              <!-- Speaker (top-right) -->
-              <div class="flashcard-button button-speaker top-right">
-                <img src="assets/images/speaker.svg" alt="Speaker Icon">
-              </div>
-              <!-- Left Arrow (bottom-left) -->
-              <div class="flashcard-button button-arrow bottom-left">
-                <img src="assets/images/Arrow left.svg" alt="Left Arrow">
-              </div>
-              <!-- Right Arrow (bottom-right) -->
-              <div class="flashcard-button button-arrow bottom-right">
-                <img src="assets/images/Arrow right.svg" alt="Right Arrow">
-              </div>
+    <!-- Center Column -->
+<div class="center-column">
+  <!-- Wrapper to vertically stack the flip-container and counter -->
+  <div class="flashcard-wrapper">
 
-              <!-- Main front text -->
-              <p class="flashcard-text">Hello</p>
+    <!-- Flip Container -->
+    <div class="flip-container" onclick="flipCard(event)">
+      <div class="flashcard-inner">
+        
+        <!-- FRONT FACE -->
+        <div class="flashcard-face flashcard-front">
+          <div class="flashcard">
+            <!-- Lightbulb (top-left) -->
+            <div class="flashcard-button button-lightbulb top-left">
+              <img src="assets/images/light.svg" alt="Lightbulb Icon">
             </div>
-          </div>
-
-          <!-- BACK FACE -->
-          <div class="flashcard-face flashcard-back">
-            <div class="flashcard">
-              <!-- Same buttons on the back side (optional) -->
-              <div class="flashcard-button button-lightbulb top-left">
-                <img src="assets/images/light.svg" alt="Lightbulb Icon">
-              </div>
-              <div class="flashcard-button button-book top-center">
-                <img src="assets/images/book.svg" alt="Book Icon">
-              </div>
-              <div class="flashcard-button button-speaker top-right">
-                <img src="assets/images/speaker.svg" alt="Speaker Icon">
-              </div>
-              <div class="flashcard-button button-arrow bottom-left">
-                <img src="assets/images/Arrow left.svg" alt="Left Arrow">
-              </div>
-              <div class="flashcard-button button-arrow bottom-right">
-                <img src="assets/images/Arrow right.svg" alt="Right Arrow">
-              </div>
-
-              <!-- Main back text -->
-              <p class="flashcard-text back-text">This is the Answer!</p>
+            <!-- Book (top-center) -->
+            <div class="flashcard-button button-book top-center">
+              <img src="assets/images/book.svg" alt="Book Icon">
             </div>
-          </div>
+            <!-- Speaker (top-right) -->
+            <div class="flashcard-button button-speaker top-right">
+              <img src="assets/images/speaker.svg" alt="Speaker Icon">
+            </div>
+            <!-- Left Arrow (bottom-left) -->
+            <div class="flashcard-button button-arrow bottom-left">
+              <img src="assets/images/Arrow left.svg" alt="Left Arrow">
+            </div>
+            <!-- Right Arrow (bottom-right) -->
+            <div class="flashcard-button button-arrow bottom-right">
+              <img src="assets/images/Arrow right.svg" alt="Right Arrow">
+            </div>
 
-        </div> <!-- .flashcard-inner -->
-      </div> <!-- .flip-container -->
-    </div> <!-- .center-column -->
+            <!-- Main front text -->
+            <p class="flashcard-text">Hello</p>
+          </div>
+        </div>
+
+        <!-- BACK FACE -->
+        <div class="flashcard-face flashcard-back">
+          <div class="flashcard">
+            <!-- Same buttons on the back side (optional) -->
+            <div class="flashcard-button button-lightbulb top-left">
+              <img src="assets/images/light.svg" alt="Lightbulb Icon">
+            </div>
+            <div class="flashcard-button button-book top-center">
+              <img src="assets/images/book.svg" alt="Book Icon">
+            </div>
+            <div class="flashcard-button button-speaker top-right">
+              <img src="assets/images/speaker.svg" alt="Speaker Icon">
+            </div>
+            <div class="flashcard-button button-arrow bottom-left">
+              <img src="assets/images/Arrow left.svg" alt="Left Arrow">
+            </div>
+            <div class="flashcard-button button-arrow bottom-right">
+              <img src="assets/images/Arrow right.svg" alt="Right Arrow">
+            </div>
+
+            <!-- Main back text -->
+            <p class="flashcard-text back-text">This is the Answer!</p>
+          </div>
+        </div>
+
+      </div> <!-- .flashcard-inner -->
+    </div> <!-- .flip-container -->
+
+    <!-- Counter below the card -->
+    <p id="card-counter" class="card-counter">1 / X</p>
+  </div> <!-- .flashcard-wrapper -->
+</div> <!-- .center-column -->
+
 
     <!-- Right Column: "More Cards" + 6 mini-cards -->
     <div class="right-column">
