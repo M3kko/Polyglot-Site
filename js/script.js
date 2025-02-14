@@ -20,7 +20,7 @@ const flashcards = [
   {
     frontText: 'o namae wa?',
     backText: 'What is your name?',
-    audioPath: '../assets/audio/onamewa.mp3',
+    audioPath: 'assets/audio/o-namae-wa.mp3',
   },
   {
     frontText: 'Tanoshimi',
@@ -44,12 +44,12 @@ const flashcards = [
   {
     frontText: 'Genki desu',
     backText: 'I’m good',
-    audiopath: '/assets/audio/genki_desu.mp3',
+    audioPath: 'assets/audio/genki-desu.mp3',
   },
   {
     frontText: 'Sayounara',
     backText: 'Goodbye',
-    audiopath: '/assets/audio/Sayounara.mp3',
+    audioPath: '/assets/audio/Sayounara.mp3',
   }
 ];
 
