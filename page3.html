@@ -6,33 +6,54 @@
   <link rel="stylesheet" href="css/flashcard.css" />
 </head>
 <body>
-  
   <!-- Main heading -->
   <h1 class="main-heading">Polyglot Cafe</h1>
 
   <!-- 3-column layout -->
   <div class="page-layout">
-
     <!-- Left Column: "Join The Discord!" -->
     <div class="left-column">
       <h2 class="join-discord">Join The<br>Discord!</h2>
     </div>
 
-    <!-- Center Column: Flip Container (click to flip) -->
+    <!-- Center Column: Flip Container -->
     <div class="center-column">
-      <!-- 
-        flip-container: adds perspective 
-        .flashcard-inner: the rotating element
-        Toggling "is-flipped" on .flashcard-inner triggers the 3D flip 
-      -->
       <div class="flip-container" onclick="flipCard(event)">
         <div class="flashcard-inner">
           
           <!-- FRONT FACE -->
           <div class="flashcard-face flashcard-front">
-            <!-- The .flashcard is the main 500×300 card with background & corners -->
             <div class="flashcard">
-              <!-- Icons in corners -->
+              <!-- Lightbulb (top-left) -->
+              <div class="flashcard-button button-lightbulb top-left">
+                <img src="assets/images/light.svg" alt="Lightbulb Icon">
+              </div>
+              <!-- Book (top-center) -->
+              <div class="flashcard-button button-book top-center">
+                <img src="assets/images/book.svg" alt="Book Icon">
+              </div>
+              <!-- Speaker (top-right) -->
+              <div class="flashcard-button button-speaker top-right">
+                <img src="assets/images/speaker.svg" alt="Speaker Icon">
+              </div>
+              <!-- Left Arrow (bottom-left) -->
+              <div class="flashcard-button button-arrow bottom-left">
+                <img src="assets/images/Arrow left.svg" alt="Left Arrow">
+              </div>
+              <!-- Right Arrow (bottom-right) -->
+              <div class="flashcard-button button-arrow bottom-right">
+                <img src="assets/images/Arrow right.svg" alt="Right Arrow">
+              </div>
+
+              <!-- Main front text -->
+              <p class="flashcard-text">Hello</p>
+            </div>
+          </div>
+
+          <!-- BACK FACE -->
+          <div class="flashcard-face flashcard-back">
+            <div class="flashcard">
+              <!-- Copy the same buttons if you want them on the back side too -->
               <div class="flashcard-button button-lightbulb top-left">
                 <img src="assets/images/light.svg" alt="Lightbulb Icon">
               </div>
@@ -40,7 +61,7 @@
                 <img src="assets/images/book.svg" alt="Book Icon">
               </div>
               <div class="flashcard-button button-speaker top-right">
-                <img src="assets/images/Speaker.svg" alt="Speaker Icon">
+                <img src="assets/images/speaker.svg" alt="Speaker Icon">
               </div>
               <div class="flashcard-button button-arrow bottom-left">
                 <img src="assets/images/Arrow left.svg" alt="Left Arrow">
@@ -49,33 +70,7 @@
                 <img src="assets/images/Arrow right.svg" alt="Right Arrow">
               </div>
 
-              <!-- Main text on the front side -->
-              <p class="flashcard-text">Hello</p>
-            </div>
-          </div>
-
-          <!-- BACK FACE -->
-          <div class="flashcard-face flashcard-back">
-            <div class="flashcard">
-
-                <div class="flashcard-button button-lightbulb top-left">
-                    <img src="assets/images/light.svg" alt="Lightbulb Icon">
-                  </div>
-                  <div class="flashcard-button button-book top-center">
-                    <img src="assets/images/book.svg" alt="Book Icon">
-                  </div>
-                  <div class="flashcard-button button-speaker top-right">
-                    <img src="assets/images/Speaker.svg" alt="Speaker Icon">
-                  </div>
-                  <div class="flashcard-button button-arrow bottom-left">
-                    <img src="assets/images/Arrow left.svg" alt="Left Arrow">
-                  </div>
-                  <div class="flashcard-button button-arrow bottom-right">
-                    <img src="assets/images/Arrow right.svg" alt="Right Arrow">
-                  </div>
-
-
-              <!-- Text on the back side -->
+              <!-- Main back text -->
               <p class="flashcard-text back-text">This is the Answer!</p>
             </div>
           </div>
@@ -111,15 +106,94 @@
     </div>
   </div>
 
-  <!-- Simple inline JS to toggle flip on click -->
   <script>
+    /* 1) Flip the card on click, UNLESS user clicked a .flashcard-button */
     function flipCard(event) {
-      // Stop if user clicked a button
       if (event.target.closest('.flashcard-button')) {
         return;
       }
-      // Otherwise, do the flip
       document.querySelector('.flashcard-inner').classList.toggle('is-flipped');
+    }
+
+    /* 2) Add separate event listeners for each button type */
+    document.addEventListener('DOMContentLoaded', () => {
+      /* Lightbulb: show first letter */
+      const lightbulbButtons = document.querySelectorAll('.button-lightbulb');
+      lightbulbButtons.forEach(button => {
+        button.addEventListener('click', e => {
+          e.stopPropagation(); // prevent flip
+          showFirstLetter();
+        });
+      });
+
+      /* Book: link to google.com */
+      const bookButtons = document.querySelectorAll('.button-book');
+      bookButtons.forEach(button => {
+        button.addEventListener('click', e => {
+          e.stopPropagation(); // prevent flip
+          window.open('https://www.google.com', '_blank');
+        });
+      });
+
+      /* Speaker: play audio (replace with your actual file path) */
+      const speakerButtons = document.querySelectorAll('.button-speaker');
+      speakerButtons.forEach(button => {
+        button.addEventListener('click', e => {
+          e.stopPropagation(); // prevent flip
+          const audio = new Audio('assets/audio/example.mp3');
+          audio.play();
+        });
+      });
+
+      /* Right Arrow: go to next flashcard (placeholder) */
+      const rightArrowButtons = document.querySelectorAll('.button-arrow.bottom-right');
+      rightArrowButtons.forEach(button => {
+        button.addEventListener('click', e => {
+          e.stopPropagation(); // prevent flip
+          nextFlashcard();
+        });
+      });
+
+      /* Left Arrow: go to previous flashcard (placeholder) */
+      const leftArrowButtons = document.querySelectorAll('.button-arrow.bottom-left');
+      leftArrowButtons.forEach(button => {
+        button.addEventListener('click', e => {
+          e.stopPropagation(); // prevent flip
+          previousFlashcard();
+        });
+      });
+    });
+
+    /* 3) Helper Functions */
+
+    // Show first letter of the front text
+    function showFirstLetter() {
+      // Grab whichever text you want (front or back).
+      // E.g., get front text specifically:
+      const flashcardText = document.querySelector('.flashcard-front .flashcard-text');
+      
+      if (!flashcardText) {
+        alert('No text found!');
+        return;
+      }
+      const text = flashcardText.textContent.trim();
+      if (text.length > 0) {
+        alert(`First letter: ${text[0]}`);
+      } else {
+        alert('No text found!');
+      }
+    }
+
+    // Next flashcard (placeholder logic)
+    function nextFlashcard() {
+      alert('Going to the next flashcard...');
+      // Implement your real logic here, e.g. load new data
+    }
+
+    // Previous flashcard (placeholder logic)
+    function previousFlashcard() {
+      alert('Going to the previous flashcard...');
+      // Implement your real logic here
     }
   </script>
 </body>
