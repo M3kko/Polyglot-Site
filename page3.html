@@ -25,7 +25,7 @@
         .flashcard-inner: the rotating element
         Toggling "is-flipped" on .flashcard-inner triggers the 3D flip 
       -->
-      <div class="flip-container" onclick="flipCard()">
+      <div class="flip-container" onclick="flipCard(event)">
         <div class="flashcard-inner">
           
           <!-- FRONT FACE -->
@@ -114,15 +114,12 @@
   <!-- Simple inline JS to toggle flip on click -->
   <script>
     function flipCard(event) {
-      // 1) If the click came from a .flashcard-button
-      //    or any nested element, do NOT flip
+      // Stop if user clicked a button
       if (event.target.closest('.flashcard-button')) {
         return;
       }
-      
-      // 2) Otherwise, flip the card
-      const cardInner = document.querySelector('.flashcard-inner');
-      cardInner.classList.toggle('is-flipped');
+      // Otherwise, do the flip
+      document.querySelector('.flashcard-inner').classList.toggle('is-flipped');
     }
   </script>
 </body>
