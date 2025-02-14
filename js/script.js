@@ -4,27 +4,33 @@
 const flashcards = [
   {
     frontText: 'Kudasai',
-    backText: 'Please'
+    backText: 'Please',
+    audioPath: '/assets/audio/kudasai.mp3',
   },
   {
     frontText: 'Hai',
-    backText: 'Yes'
+    backText: 'Yes',
+    audioPath: '/assets/audio/hai.mp3',
   },
   {
     frontText: 'Iie',
-    backText: 'No'
+    backText: 'No',
+    audioPath: '/assets/audio/iie.mp3',
   },
   {
-    frontText: 'Namae wa nan desu ka?',
-    backText: 'What is your name?'
+    frontText: 'o namae wa?',
+    backText: 'What is your name?',
+    audioPath: '../assets/audio/onamewa.mp3',
   },
   {
     frontText: 'Tanoshimi',
-    backText: 'I’m excited'
+    backText: 'I’m excited',
+    audioPath: '/assets/audio/tanoshimi.mp3',
   },
   {
     frontText: 'Konnichiwa',
-    backText: 'Hello'
+    backText: 'Hello',
+    audioPath: 'assets/audio/konnichiwa.mp3',
   },
   {
     frontText: 'Watashi wa [your name] desu',
@@ -32,19 +38,18 @@ const flashcards = [
   },
   {
     frontText: 'Ogenki desu ka?',
-    backText: 'How are you?'
+    backText: 'How are you?',
+    audioPath: '/assets/audio/ogenki-desu-ka.mp3',
   },
   {
     frontText: 'Genki desu',
-    backText: 'I’m good'
-  },
-  {
-    frontText: 'Konbanwa',
-    backText: 'Good evening'
+    backText: 'I’m good',
+    audiopath: '/assets/audio/genki_desu.mp3',
   },
   {
     frontText: 'Sayounara',
-    backText: 'Goodbye'
+    backText: 'Goodbye',
+    audiopath: '/assets/audio/Sayounara.mp3',
   }
 ];
 
