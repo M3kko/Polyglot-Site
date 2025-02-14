@@ -1,0 +1,130 @@
+/* 1. Load the Gochi Hand font locally */
+@font-face {
+  font-family: 'GochiHand';
+  /* Update the file name/path if needed */
+  src: url('../assets/fonts/GochiHand-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 2. Load the Fredoka One font locally */
+@font-face {
+  font-family: 'FredokaOne';
+  /* Update the file name/path if needed */
+  src: url('../assets/fonts/FredokaOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 3. Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 4. Body: Flex container for centering content */
+body {
+  background-color: #F7E7CE; /* Page background color */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* If you want everything vertically centered, use "justify-content: center;" */
+  justify-content: flex-start;
+}
+
+/* 5. Main Heading ("Polyglot Cafe") */
+.heading {
+  font-family: 'GochiHand', cursive;
+  font-size: 64px;
+  color: #2B1E13;
+  text-align: center;
+  margin-top: 40px; /* Some space from the top */
+}
+
+/* 6. Subheading */
+.subheading {
+  font-family: 'FredokaOne', sans-serif;
+  font-size: 24px;
+  color: #2B1E13;
+  text-align: center;
+  margin-top: 14px; /* 14px gap below the heading */
+}
+
+/* 7. Anchor styling for the card link */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 8. Card Container */
+.card-container {
+  background-color: #FFFDF9;
+  width: 260px;
+  height: 260px;
+  border-radius: 20px;
+
+  /* Flex to center contents vertically & horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* 44px gap below subheading (if subheading is present) */
+  margin-top: 44px;
+
+  /* Hover transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 9. Hover effect: scale up slightly and add a subtle shadow */
+.card-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* 10. Flag (SVG or PNG) inside the card */
+.flag-img {
+  width: 120px;
+  height: 80px;
+  /* For SVGs this is typically enough.
+     If you’re using a PNG/JPG, you could also do:
+       object-fit: contain;
+     if needed. 
+  */
+}
+
+/* 
+  11. For scenarios where you want a large title,
+      e.g. "Week 1" at 32px 
+*/
+.week-title {
+  font-family: 'FredokaOne', sans-serif;
+  font-size: 32px;
+  color: #2B1E13;
+  text-align: center;
+  margin-top: 16px; /* space below the flag */
+  margin-bottom: 8px;
+}
+
+/* 12. Subtext under a large title */
+.week-subtext {
+  font-family: 'FredokaOne', sans-serif;
+  font-size: 16px;
+  color: #2B1E13;
+  text-align: center;
+  margin: 0;
+}
+
+/* 13. Original Card Text 
+      "The only language...<br> for now" 
+      If you still want to use your old structure:
+*/
+.card-text {
+  font-family: 'FredokaOne', sans-serif;
+  font-size: 16px;
+  color: #2B1E13;
+  text-align: center;
+  margin-top: 14px;
+}
