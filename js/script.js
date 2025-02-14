@@ -49,7 +49,7 @@ const flashcards = [
   {
     frontText: 'Sayounara',
     backText: 'Goodbye',
-    audioPath: '/assets/audio/Sayounara.mp3',
+    audioPath: '/assets/audio/sayounara.mp3',
   }
 ];
 
