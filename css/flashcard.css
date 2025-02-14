@@ -167,3 +167,94 @@
     line-height: 1.3;
   }
   
+  /* 1. The flashcard: position relative so we can absolutely position buttons inside */
+.flashcard {
+    width: 500px;
+    height: 300px;
+    background-color: #FFFDF9;
+    border-radius: 20px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    position: relative; /* important for absolutely placed child elements */
+  }
+  
+  /* 2. Center "Hello" text (already in place) */
+  .flashcard-text {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 24px;
+    color: #C49C6E;
+    text-align: center;
+  }
+  
+  /* 3. Base button style for all 48×48 flashcard buttons */
+  .flashcard-button {
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    border: 1px solid #2A1D12;
+    border-radius: 8px;
+    box-sizing: border-box;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* Add a transition for hover animation */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer; /* show pointer on hover */
+    position: absolute; /* so we can place them in corners */
+  }
+  
+  /* 4. Different background colors per icon */
+  .button-lightbulb {
+    background-color: #FFFCBE;
+  }
+  .button-book {
+    background-color: #C6DBFF;
+  }
+  .button-speaker {
+    background-color: #F8C5D0;
+  }
+  .button-arrow {
+    background-color: #E5FFE4;
+  }
+  
+  /* 5. Position classes for corners/edges inside .flashcard */
+  .top-left {
+    top: 16px;
+    left: 16px;
+  }
+  .top-center {
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%); /* center horizontally */
+  }
+  .top-right {
+    top: 16px;
+    right: 16px;
+  }
+  .bottom-left {
+    bottom: 16px;
+    left: 16px;
+  }
+  .bottom-right {
+    bottom: 16px;
+    right: 16px;
+  }
+  
+  /* 6. Hover animation: subtle scale & shadow */
+  .flashcard-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* 7. For the child img: ensure it fits nicely within 32px if needed */
+  .flashcard-button img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain; /* or 'cover', if you prefer */
+  }
+  
