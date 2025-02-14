@@ -95,7 +95,14 @@
 
   <!-- Simple inline JS to toggle flip on click -->
   <script>
-    function flipCard() {
+    function flipCard(event) {
+      // 1) If the click came from a .flashcard-button
+      //    or any nested element, do NOT flip
+      if (event.target.closest('.flashcard-button')) {
+        return;
+      }
+      
+      // 2) Otherwise, flip the card
       const cardInner = document.querySelector('.flashcard-inner');
       cardInner.classList.toggle('is-flipped');
     }
