@@ -3,59 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <title>Polyglot Cafe – Page 3</title>
-  <!-- Link to your dedicated flashcard.css -->
-  <link rel="stylesheet" href="css/flashcard.css">
+  <link rel="stylesheet" href="css/flashcard.css" />
 </head>
 <body>
   
-  <!-- 1. Main Page Heading -->
+  <!-- Main heading -->
   <h1 class="main-heading">Polyglot Cafe</h1>
 
-  <!-- 2. Three-Column Layout -->
+  <!-- 3-column layout -->
   <div class="page-layout">
-    <!-- Left Column: Join The Discord -->
+
+    <!-- Left Column: "Join The Discord!" -->
     <div class="left-column">
       <h2 class="join-discord">Join The<br>Discord!</h2>
     </div>
 
-     <!-- Center Column: Main Flashcard (500×300) -->
-     <div class="center-column">
-        <div class="flashcard">
-          <!-- 1) Lightbulb: top-left -->
-          <div class="flashcard-button button-lightbulb top-left">
-            <img src="assets/icons/lightbulb.svg" alt="Lightbulb Icon">
+    <!-- Center Column: Flip Container (click to flip) -->
+    <div class="center-column">
+      <!-- 
+        flip-container: adds perspective 
+        .flashcard-inner: the rotating element
+        Toggling "is-flipped" on .flashcard-inner triggers the 3D flip 
+      -->
+      <div class="flip-container" onclick="flipCard()">
+        <div class="flashcard-inner">
+          
+          <!-- FRONT FACE -->
+          <div class="flashcard-face flashcard-front">
+            <!-- The .flashcard is the main 500×300 card with background & corners -->
+            <div class="flashcard">
+              <!-- Icons in corners -->
+              <div class="flashcard-button button-lightbulb top-left">
+                <img src="assets/icons/lightbulb.svg" alt="Lightbulb Icon">
+              </div>
+              <div class="flashcard-button button-book top-center">
+                <img src="assets/icons/book.svg" alt="Book Icon">
+              </div>
+              <div class="flashcard-button button-speaker top-right">
+                <img src="assets/icons/speaker.svg" alt="Speaker Icon">
+              </div>
+              <div class="flashcard-button button-arrow bottom-left">
+                <img src="assets/icons/arrow-left.svg" alt="Left Arrow">
+              </div>
+              <div class="flashcard-button button-arrow bottom-right">
+                <img src="assets/icons/arrow-right.svg" alt="Right Arrow">
+              </div>
+
+              <!-- Main text on the front side -->
+              <p class="flashcard-text">Hello</p>
+            </div>
           </div>
-  
-          <!-- 2) Book: top-center -->
-          <div class="flashcard-button button-book top-center">
-            <img src="assets/icons/book.svg" alt="Book Icon">
+
+          <!-- BACK FACE -->
+          <div class="flashcard-face flashcard-back">
+            <div class="flashcard">
+              <!-- Text on the back side -->
+              <p class="flashcard-text back-text">This is the Answer!</p>
+            </div>
           </div>
-  
-          <!-- 3) Speaker: top-right -->
-          <div class="flashcard-button button-speaker top-right">
-            <img src="assets/icons/speaker.svg" alt="Speaker Icon">
-          </div>
-  
-          <!-- 4) Left Arrow: bottom-left -->
-          <div class="flashcard-button button-arrow bottom-left">
-            <img src="assets/icons/arrow-left.svg" alt="Left Arrow">
-          </div>
-  
-          <!-- 5) Right Arrow: bottom-right -->
-          <div class="flashcard-button button-arrow bottom-right">
-            <img src="assets/icons/arrow-right.svg" alt="Right Arrow">
-          </div>
-  
-          <!-- Example text in the center -->
-          <p class="flashcard-text">Hello</p>
+
         </div>
       </div>
+    </div>
 
     <!-- Right Column: "More Cards" + 6 mini-cards -->
     <div class="right-column">
       <h2 class="more-cards">More Cards</h2>
       <div class="mini-cards-grid">
-        <!-- 6 small 120×120 cards, each with "Coming Soon :)" -->
+        <!-- 6 small 120×120 cards each with "Coming Soon :)" -->
         <div class="mini-card">
           <p class="coming-soon">Coming<br>Soon :)</p>
         </div>
@@ -77,5 +92,13 @@
       </div>
     </div>
   </div>
+
+  <!-- Simple inline JS to toggle flip on click -->
+  <script>
+    function flipCard() {
+      const cardInner = document.querySelector('.flashcard-inner');
+      cardInner.classList.toggle('is-flipped');
+    }
+  </script>
 </body>
 </html>
