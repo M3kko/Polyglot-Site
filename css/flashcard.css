@@ -335,7 +335,7 @@
   /* ============================
      11. Mobile Media Queries
      ============================ */
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
   
     /* Hide "Join the Discord!" */
     .left-column {
