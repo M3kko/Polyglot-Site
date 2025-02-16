@@ -335,31 +335,53 @@
   /* ============================
      11. Mobile Media Queries
      ============================ */
-  @media screen and (max-width: 768px) {
+     @media screen and (max-width: 768px) {
   
-    /* Hide "Join the Discord!" */
-    .left-column {
-      display: none;
+      /* Hide "Join the Discord!" */
+      .left-column {
+        display: none;
+      }
+      
+      /* Single-column layout */
+      .page-layout {
+        grid-template-columns: 1fr; /* only one column now */
+        grid-row-gap: 30px;
+      }
+      
+      /* Scale down entire flip-container */
+      .flip-container {
+        transform: scale(0.85);
+        transform-origin: top center;
+        margin: 0 auto;
+      }
+      
+      /* Allow horizontal overflow if necessary (or remove if not needed) */
+      .center-column {
+        overflow-x: visible;
+      }
+    
+      /* Adjust flashcard button positions so they remain inside the white card */
+      .flashcard-button.top-left {
+        top: 8px;
+        left: 8px;
+      }
+      .flashcard-button.top-center {
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .flashcard-button.top-right {
+        top: 8px;
+        right: 8px;
+      }
+      .flashcard-button.bottom-left {
+        bottom: 8px;
+        left: 8px;
+      }
+      .flashcard-button.bottom-right {
+        bottom: 8px;
+        right: 8px;
+      }
     }
-  
-    /* Single-column layout */
-    .page-layout {
-      grid-template-columns: 1fr; /* only one column now */
-      grid-row-gap: 30px;
-    }
-  
-    /* Scale down entire flip-container */
-    .flip-container {
-      transform: scale(0.85);
-      transform-origin: top center;
-      margin: 0 auto;
-    }
-  
-    /* If you want more or less scaling, adjust 0.85 to 0.8 or 0.9, etc. */
-  
-    /* Avoid horizontal overflow */
-    .center-column {
-      overflow: hidden;
-    }
-  }
+    
   
