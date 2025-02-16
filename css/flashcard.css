@@ -336,7 +336,7 @@
      11. Mobile Media Queries
      ============================ */
      @media screen and (max-width: 768px) {
-  
+
       /* Hide "Join the Discord!" */
       .left-column {
         display: none;
@@ -354,16 +354,21 @@
         transform-origin: top center;
         margin: 0 auto;
       }
-
-      /* Add padding around flashcard buttons */
-      .flashcard-button {
-        margin: 24px;
-      }
-    
-      /* If you want more or less scaling, adjust 0.85 to 0.8 or 0.9, etc. */
     
       /* Avoid horizontal overflow */
       .center-column {
-        overflow: hidden; }
+        overflow: hidden;
       }
+    
+      /* Add rounded borders back to flashcards */
+      .flashcard-face {
+        border-radius: 20px;
+      }
+    
+      /* Scale down flashcard buttons */
+      .flashcard-button {
+        transform: scale(0.85);
+        transform-origin: center;
+      }
+    }
 
