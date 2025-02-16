@@ -357,7 +357,7 @@
 
       /* Add padding around flashcard buttons */
       .flashcard-button {
-        margin: 8px;
+        margin: 24px;
       }
     
       /* If you want more or less scaling, adjust 0.85 to 0.8 or 0.9, etc. */
