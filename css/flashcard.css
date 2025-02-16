@@ -355,9 +355,21 @@
         margin: 0 auto;
       }
 
-      .flashcard-button img {
-        width: 24px;
-        height: 24px;
+      .flashcard-button {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        padding: 8px;
+        border: 1px solid #2A1D12;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+        background-color: #FFFDF9;
+        transform-origin: center center;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
     
       /* If you want more or less scaling, adjust 0.85 to 0.8 or 0.9, etc. */
