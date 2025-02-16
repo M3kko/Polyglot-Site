@@ -336,6 +336,7 @@
      11. Mobile Media Queries
      ============================ */
      @media screen and (max-width: 768px) {
+  
       /* Hide "Join the Discord!" */
       .left-column {
         display: none;
@@ -347,49 +348,18 @@
         grid-row-gap: 30px;
       }
     
-      /* Instead of scaling with transform, set a smaller width for the flip-container */
+      /* Scale down entire flip-container */
       .flip-container {
-        width: 90%;
-        max-width: 350px; /* adjust this value as needed */
+        transform: scale(0.85);
+        transform-origin: top center;
         margin: 0 auto;
-        transform: none; /* disable the previous scale transform */
       }
     
-      /* Ensure the flashcard-inner fills the container */
-      .flashcard-inner {
-        width: 100%;
-        height: auto;
-      }
-      
-      /* Let the flashcard fill its container */
-      .flashcard {
-        width: 100%;
-        height: auto;
-        position: relative;
-      }
+      /* If you want more or less scaling, adjust 0.85 to 0.8 or 0.9, etc. */
     
-      /* Adjust button positions as percentages relative to the flashcard's dimensions */
-      .flashcard-button.top-left {
-        top: 5%;
-        left: 5%;
+      /* Avoid horizontal overflow */
+      .center-column {
+        overflow: hidden; }
       }
-      .flashcard-button.top-center {
-        top: 5%;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-      .flashcard-button.top-right {
-        top: 5%;
-        right: 5%;
-      }
-      .flashcard-button.bottom-left {
-        bottom: 5%;
-        left: 5%;
-      }
-      .flashcard-button.bottom-right {
-        bottom: 5%;
-        right: 5%;
-      }
-    }
     
   
