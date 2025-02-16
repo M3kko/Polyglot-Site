@@ -348,27 +348,20 @@
         grid-row-gap: 30px;
       }
     
-      /* Scale down entire flip-container */
+      /* Scale down the entire flip-container (which scales all its children uniformly) */
       .flip-container {
         transform: scale(0.85);
         transform-origin: top center;
         margin: 0 auto;
       }
     
-      /* Avoid horizontal overflow */
+      /* Ensure the center column does not clip the scaled content */
       .center-column {
-        overflow: hidden;
+        overflow: visible;
       }
     
-      /* Add rounded borders back to flashcards */
-      .flashcard-face {
-        border-radius: 20px;
-      }
-    
-      /* Scale down flashcard buttons */
-      .flashcard-button {
-        transform: scale(0.85);
-        transform-origin: center;
-      }
+      /* Remove any additional scaling on .flashcard-button */
+      /* (Ensure no separate .flashcard-button scaling rules exist in this media query) */
     }
+    
 
