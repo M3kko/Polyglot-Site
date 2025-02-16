@@ -354,6 +354,11 @@
         transform-origin: top center;
         margin: 0 auto;
       }
+
+      .flashcard-button img {
+        width: 24px;
+        height: 24px;
+      }
     
       /* If you want more or less scaling, adjust 0.85 to 0.8 or 0.9, etc. */
     
