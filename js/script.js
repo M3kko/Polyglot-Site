@@ -1,59 +1,70 @@
 /******************************************************
  * 1) FLASHCARDS DATA
  ******************************************************/
-const flashcards = [
-  {
-    frontText: 'Kudasai',
-    backText: 'Please',
-    audioPath: '/assets/audio/kudasai.mp3',
-  },
-  {
-    frontText: 'Hai',
-    backText: 'Yes',
-    audioPath: '/assets/audio/hai.mp3',
-  },
-  {
-    frontText: 'Iie',
-    backText: 'No',
-    audioPath: '/assets/audio/iie.mp3',
-  },
-  {
-    frontText: 'o namae wa?',
-    backText: 'What is your name?',
-    audioPath: 'assets/audio/o-namae-wa.mp3',
-  },
-  {
-    frontText: 'Tanoshimi',
-    backText: 'I’m excited',
-    audioPath: '/assets/audio/tanoshimi.mp3',
-  },
-  {
-    frontText: 'Konnichiwa',
-    backText: 'Hello',
-    audioPath: 'assets/audio/konnichiwa.mp3',
-  },
-  {
-    frontText: 'Watashi wa [your name] desu',
-    backText: 'I am [your name]'
-  },
-  {
-    frontText: 'Ogenki desu ka?',
-    backText: 'How are you?',
-    audioPath: '/assets/audio/ogenki-desu-ka.mp3',
-  },
-  {
-    frontText: 'Genki desu',
-    backText: 'I’m good',
-    audioPath: 'assets/audio/genki-desu.mp3',
-  },
-  {
-    frontText: 'Jaa, mata',
-    backText: 'Goodbye',
-    audioPath: '/assets/audio/jaa.mp3',
-  }
-];
+const flashcardSets = {
+  japaneseWeek1: [
+    {
+      frontText: 'Kudasai',
+      backText: 'Please',
+      audioPath: '/assets/audio/kudasai.mp3',
+    },
+    {
+      frontText: 'Hai',
+      backText: 'Yes',
+      audioPath: '/assets/audio/hai.mp3',
+    },
+    {
+      frontText: 'Iie',
+      backText: 'No',
+      audioPath: '/assets/audio/iie.mp3',
+    },
+    {
+      frontText: 'o namae wa?',
+      backText: 'What is your name?',
+      audioPath: 'assets/audio/o-namae-wa.mp3',
+    },
+    {
+      frontText: 'Tanoshimi',
+      backText: 'I’m excited',
+      audioPath: '/assets/audio/tanoshimi.mp3',
+    },
+    {
+      frontText: 'Konnichiwa',
+      backText: 'Hello',
+      audioPath: 'assets/audio/konnichiwa.mp3',
+    },
+    {
+      frontText: 'Watashi wa [your name] desu',
+      backText: 'I am [your name]',
+    },
+    {
+      frontText: 'Ogenki desu ka?',
+      backText: 'How are you?',
+      audioPath: '/assets/audio/ogenki-desu-ka.mp3',
+    },
+    {
+      frontText: 'Genki desu',
+      backText: 'I’m good',
+      audioPath: '/assets/audio/genki-desu.mp3',
+    },
+    {
+      frontText: 'Jaa, mata',
+      backText: 'Goodbye',
+      audioPath: '/assets/audio/jaa.mp3',
+    }
+  ],
 
+  japaneseWeek2: [ ]
+};
 
+// 2) Pick which set to load:
+let currentSetKey = 'japaneseWeek1'; 
+// you might switch this dynamically or via URL params one day
+
+// 3) Get the flashcards from the chosen set
+const flashcards = flashcardSets[currentSetKey];
+
+// 4) The index tracking stays the same
 let currentIndex = 0;
 
 /******************************************************
