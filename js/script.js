@@ -57,9 +57,7 @@ const flashcardSets = {
   japaneseWeek2: [ ]
 };
 
-// 2) Pick which set to load:
-let currentSetKey = 'japaneseWeek1'; 
-// you might switch this dynamically or via URL params one day
+
 
 // 3) Get the flashcards from the chosen set
 const flashcards = flashcardSets[currentSetKey];
