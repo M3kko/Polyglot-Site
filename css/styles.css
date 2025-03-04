@@ -54,6 +54,8 @@ body {
 
 /* 7. Anchor styling for the card link */
 .card-link {
+  display: block;
+  width: 100%;
   text-decoration: none;
   color: inherit;
 }
@@ -73,6 +75,7 @@ body {
 
   /* 44px gap below subheading (if subheading is present) */
   margin-top: 44px;
+  margin-bottom: 20px;
 
   /* Hover transition */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -127,4 +130,18 @@ body {
   color: #2B1E13;
   text-align: center;
   margin-top: 14px;
+}
+
+/* Desktop layout (three columns) */
+@media screen and (min-width: 769px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .card-link {
+    width: auto;
+    margin: 0;
+  }
 }
