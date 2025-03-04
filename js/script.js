@@ -81,7 +81,7 @@ const flashcardSets = {
       audioPath: '',
     },
     {
-      frontText: 'Koohi',
+      frontText: 'Koohii',
       backText: 'Coffee',
       audioPath: '',
     },
@@ -93,11 +93,6 @@ const flashcardSets = {
     {
       frontText: 'Pan',
       backText: 'Bread',
-      audioPath: '',
-    },
-    {
-      frontText: 'Kashipan',
-      backText: 'Sweet Bread',
       audioPath: '',
     },
   ]
