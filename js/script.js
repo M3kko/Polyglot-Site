@@ -54,7 +54,53 @@ const flashcardSets = {
     }
   ],
 
-  japaneseWeek2: [ ]
+  japaneseWeek2: [
+    {
+      frontText: 'Grape',
+      backText: 'Budou',
+      audioPath: '',
+    },
+    {
+      frontText: 'Apple',
+      backText: 'Ringo',
+      audioPath: '',
+    },
+    {
+      frontText: 'Banana',
+      backText: 'Banana',
+      audioPath: '',
+    },
+    {
+      frontText: 'Tamago',
+      backText: 'Egg',
+      audioPath: '',
+    },
+    {
+      frontText: 'Gohan',
+      backText: 'Rice', 
+      audioPath: '',
+    },
+    {
+      frontText: 'Koohi',
+      backText: 'Coffee',
+      audioPath: '',
+    },
+    {
+      frontText: 'Mizu',  
+      backText: 'Water',
+      audioPath: '',
+    },
+    {
+      frontText: 'Pan',
+      backText: 'Bread',
+      audioPath: '',
+    },
+    {
+      frontText: 'Kashipan',
+      backText: 'Sweet Bread',
+      audioPath: '',
+    },
+  ]
 };
 
 
