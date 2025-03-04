@@ -58,42 +58,42 @@ const flashcardSets = {
     {
       frontText: 'Grape',
       backText: 'Budou',
-      audioPath: '',
+      audioPath: '/assets/audio/budou.mp3',
     },
     {
       frontText: 'Apple',
       backText: 'Ringo',
-      audioPath: '',
+      audioPath: '/assets/audio/ringo.mp3',
     },
     {
       frontText: 'Banana',
       backText: 'Banana',
-      audioPath: '',
+      audioPath: '/assets/audio/banana.mp3',
     },
     {
       frontText: 'Tamago',
       backText: 'Egg',
-      audioPath: '',
+      audioPath: '/assets/audio/tamago.mp3',
     },
     {
       frontText: 'Gohan',
       backText: 'Rice', 
-      audioPath: '',
+      audioPath: '/assets/audio/gohan.mp3',
     },
     {
       frontText: 'Koohii',
       backText: 'Coffee',
-      audioPath: '',
+      audioPath: '/assets/audio/koohii.mp3',
     },
     {
       frontText: 'Mizu',  
       backText: 'Water',
-      audioPath: '',
+      audioPath: '/assets/audio/mizu.mp3',
     },
     {
       frontText: 'Pan',
       backText: 'Bread',
-      audioPath: '',
+      audioPath: '/assets/audio/pan.mp3',
     },
   ]
 };
