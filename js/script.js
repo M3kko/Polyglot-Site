@@ -205,8 +205,11 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.button-book').forEach(btn => {
     btn.addEventListener('click', e => {
       e.stopPropagation();
-      window.open('https://www.google.com', '_blank');
+      const metaTag = document.querySelector('meta[name="presentation-url"]');
+      const presentationUrl = metaTag ? metaTag.content : '';
+      window.open(presentationUrl, '_blank');
     });
+  });
   });
 
   // Speaker => play audio for current card
@@ -234,4 +237,3 @@ document.addEventListener('DOMContentLoaded', () => {
       previousFlashcard();
     });
   });
-});
