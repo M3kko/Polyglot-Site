@@ -95,7 +95,96 @@ const flashcardSets = {
       backText: 'Bread',
       audioPath: '/assets/audio/pan.mp3',
     },
-  ]
+  ],
+
+  japaneseWeek3:
+  [
+    {
+      "frontText": "Ichi",
+      "backText": "One",
+      "audioPath": ""
+    },
+    {
+      "frontText": "Ni",
+      "backText": "Two",
+      "audioPath": ""
+    },
+    {
+      "frontText": "San",
+      "backText": "Three",
+      "audioPath": ""
+    },
+    {
+      "frontText": "Yon",
+      "backText": "Four",
+      "audioPath": ""
+    },
+    {
+      "frontText": "Go",
+      "backText": "Five",
+      "audioPath": ""
+    },
+    {
+      "frontText": "Roku",
+      "backText": "Six",
+      "audioPath": ""
+    },
+    {
+      "frontText": "Nana",
+      "backText": "Seven",
+      "audioPath": ""
+    },
+    {
+      "frontText": "Hachi",
+      "backText": "Eight",
+      "audioPath": ""
+    },
+    {
+      "frontText": "Kyuu",
+      "backText": "Nine",
+      "audioPath": ""
+    },
+    {
+      "frontText": "Juu",
+      "backText": "Ten",
+      "audioPath": ""
+    },
+    {
+      "frontText": "Issatsu",
+      "backText": "One Book",
+      "audioPath": ""
+    },
+    {
+      "frontText": "Nisatsu",
+      "backText": "Two Books",
+      "audioPath": ""
+    },
+    {
+      "frontText": "Sansatsu",
+      "backText": "Three Books",
+      "audioPath": ""
+    },
+    {
+      "frontText": "ichiko no ringo",
+      "backText": "One apple",
+      "audioPath": ""
+    },
+    {
+      "frontText": "niko no ringo",
+      "backText": "Two apples",
+      "audioPath": ""
+    },
+    {
+      "frontText": "sanko no ringo",
+      "backText": "Three apples",
+      "audioPath": ""
+    },
+    {
+      "frontText": "shiko no banana",
+      "backText": "Four bananas",
+      "audioPath": ""
+    }
+  ],
 };
 
 
