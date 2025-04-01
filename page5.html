@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="presentation-url" content="https://www.canva.com/design/DAGgLFc5LJs/zw0bLjbKJ7TehV76mQ8opQ/edit?utm_content=DAGgLFc5LJs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
+  <title>Polyglot Cafe</title>
+  <link rel="stylesheet" href="css/flashcard.css" />
+</head>
+<body>
+  <!-- Main heading -->
+  <h1 class="main-heading">Polyglot Cafe</h1>
+
+  <!-- 3-column layout -->
+  <div class="page-layout">
+    <!-- Left Column: "Join The Discord!" -->
+    <div class="left-column">
+      <h2 class="join-discord">Join The<br>Discord!</h2>
+    </div>
+
+    <!-- Center Column -->
+<div class="center-column">
+  <!-- Wrapper to vertically stack the flip-container and counter -->
+  <div class="flashcard-wrapper">
+
+    <!-- Flip Container -->
+    <div class="flip-container" onclick="flipCard(event)">
+      <div class="flashcard-inner">
+        
+        <!-- FRONT FACE -->
+        <div class="flashcard-face flashcard-front">
+          <div class="flashcard">
+            <!-- Lightbulb (top-left) -->
+            <div class="flashcard-button button-lightbulb top-left">
+              <img src="assets/images/light.svg" alt="Lightbulb Icon">
+            </div>
+            <!-- Book (top-center) -->
+            <div class="flashcard-button button-book top-center">
+              <img src="assets/images/book.svg" alt="Book Icon">
+            </div>
+            <!-- Speaker (top-right) -->
+            <div class="flashcard-button button-speaker top-right">
+              <img src="assets/images/speaker.svg" alt="Speaker Icon">
+            </div>
+            <!-- Left Arrow (bottom-left) -->
+            <div class="flashcard-button button-arrow bottom-left">
+              <img src="assets/images/Arrow left.svg" alt="Left Arrow">
+            </div>
+            <!-- Right Arrow (bottom-right) -->
+            <div class="flashcard-button button-arrow bottom-right">
+              <img src="assets/images/Arrow right.svg" alt="Right Arrow">
+            </div>
+
+            <!-- Main front text -->
+            <p class="flashcard-text">Hello</p>
+          </div>
+        </div>
+
+        <!-- BACK FACE -->
+        <div class="flashcard-face flashcard-back">
+          <div class="flashcard">
+            <!-- Same buttons on the back side (optional) -->
+            <div class="flashcard-button button-lightbulb top-left">
+              <img src="assets/images/light.svg" alt="Lightbulb Icon">
+            </div>
+            <div class="flashcard-button button-book top-center">
+              <img src="assets/images/book.svg" alt="Book Icon">
+            </div>
+            <div class="flashcard-button button-speaker top-right">
+              <img src="assets/images/speaker.svg" alt="Speaker Icon">
+            </div>
+            <div class="flashcard-button button-arrow bottom-left">
+              <img src="assets/images/Arrow left.svg" alt="Left Arrow">
+            </div>
+            <div class="flashcard-button button-arrow bottom-right">
+              <img src="assets/images/Arrow right.svg" alt="Right Arrow">
+            </div>
+
+            <!-- Main back text -->
+            <p class="flashcard-text back-text">This is the Answer!</p>
+          </div>
+        </div>
+
+      </div> <!-- .flashcard-inner -->
+    </div> <!-- .flip-container -->
+
+    <!-- Counter below the card -->
+    <p id="card-counter" class="card-counter">1 / X</p>
+  </div> <!-- .flashcard-wrapper -->
+</div> <!-- .center-column -->
+
+
+    <!-- Right Column: "More Cards" + 6 mini-cards -->
+    <div class="right-column">
+      <h2 class="more-cards">More Cards</h2>
+      <div class="mini-cards-grid">
+        <!-- 6 small 120×120 cards each with "Coming Soon :)" -->
+        <div class="mini-card">
+          <a href="page3.html" class="card-link" style="text-decoration: none;">
+          <p class="coming-soon">Week<br>1 </p>
+          </a>
+        </div>
+        <div class="mini-card">
+          <p class="coming-soon">Coming<br>Soon :)</p>
+        </div>
+        <div class="mini-card">
+          <p class="coming-soon">Coming<br>Soon :)</p>
+        </div>
+        <div class="mini-card">
+          <p class="coming-soon">Coming<br>Soon :)</p>
+        </div>
+        <div class="mini-card">
+          <p class="coming-soon">Coming<br>Soon :)</p>
+        </div>
+        <div class="mini-card">
+          <p class="coming-soon">Coming<br>Soon :)</p>
+        </div>
+      </div>
+    </div> <!-- .right-column -->
+  </div> <!-- .page-layout -->
+
+  <!-- Footer (Full width, centered, 2 lines) -->
+  <footer class="site-footer">
+    <p class="footer-text">Made with ❤️ by Brody</p>
+    <nav class="footer-links">
+      <a href="https://x.com/brodylame" target="_blank">X</a>
+      <a href="https://www.instagram.com/brody_lane/?hl=en" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/in/broderickc/" target="_blank">LinkedIn</a>
+    </nav>
+  </footer>
+
+  <script>
+    let currentSetKey = "japaneseWeek3";
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
